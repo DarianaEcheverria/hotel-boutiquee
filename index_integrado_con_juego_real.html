@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Boutique | Optimización de Valoraciones</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+  .game-nav { font-weight: 700; }
+  .embedded-game {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    border: 1px solid rgba(0,0,0,.10);
+    border-radius: 24px;
+    background: #f7f1e8;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  .embedded-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+  .embedded-head h3 { margin: 7px 0 5px; }
+  .embedded-head p { margin: 0; }
+  .game-frame {
+    display: block;
+    width: 100%;
+    min-height: 780px;
+    border: 0;
+    border-radius: 18px;
+    background: #fff;
+  }
+  @media (max-width: 700px) {
+    .embedded-head { flex-direction: column; align-items: flex-start; }
+    .game-frame { min-height: 900px; }
+  }
+</style>
+</head>
+<body>
+<header class="nav">
+<a class="logo" href="#inicio"><b>HB</b><span><strong>Hotel Boutique</strong><small>Optimización de valoraciones</small></span></a>
+<nav><a href="#problema">Problema</a><a href="#solucion">Solución</a><a href="#trivia">Reto</a><a href="#juego-real" class="game-nav">Abrir juego</a></nav>
+<a class="navbtn" href="#trivia">Probar reto →</a>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+<div>
+<span class="eyebrow">REPUTACIÓN DIGITAL PARA HOTELES BOUTIQUE</span>
+<h1>Convierte las <em>valoraciones</em> en oportunidades.</h1>
+<p>Identifica patrones en las reseñas, detecta problemas recurrentes y facilita decisiones de mejora en la experiencia del huésped.</p>
+<div class="actions"><a class="btn dark" href="#juego-real">🎮 Abrir juego</a><a class="btn light" href="#solucion">Conocer la solución</a></div>
+<p class="tiny">★ Reseñas · Diagnóstico · KPI · Mejora continua</p>
+</div>
+<div class="hero-art">
+<div class="hotel"><div class="building"><div class="roof"></div><div class="windows"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="door"></div></div><div class="pool"></div></div>
+<div class="rating"><small>Valoración actual</small><strong>4.1 <b>★</b></strong><small>Detecta qué la está afectando</small></div>
+</div>
+</section>
+
+<section id="problema" class="section">
+<span class="eyebrow">01 · EL PROBLEMA</span><h2>Las reseñas contienen información valiosa, pero hay que encontrar el patrón.</h2>
+<div class="cards">
+<article><span>01</span><h3>Muchas opiniones</h3><p>Los comentarios pueden contener señales sobre la experiencia que no siempre son fáciles de identificar rápidamente.</p></article>
+<article><span>02</span><h3>Problemas repetidos</h3><p>Una misma situación puede aparecer en diferentes reseñas con palabras distintas.</p></article>
+<article><span>03</span><h3>Decisiones</h3><p>El objetivo es transformar esas señales en información para priorizar acciones de mejora.</p></article>
+</div>
+</section>
+
+<section id="solucion" class="section solution">
+<div><span class="eyebrow">02 · NUESTRA SOLUCIÓN</span><h2>De la reseña a una decisión.</h2><p>La propuesta ayuda a identificar problemas recurrentes en las valoraciones y convertirlos en oportunidades de mejora.</p>
+<div class="steps"><p><b>01</b><span><strong>Detectar</strong> patrones en las opiniones.</span></p><p><b>02</b><span><strong>Diagnosticar</strong> el problema recurrente.</span></p><p><b>03</b><span><strong>Medir</strong> la mejora mediante indicadores.</span></p></div></div>
+<div class="dashboard"><small>RESUMEN DEL HOTEL</small><h3>4.1 <span>★</span></h3><p>Valoración actual</p><label>Servicio <b>82%</b></label><i><em style="width:82%"></em></i><label>Habitaciones <b>91%</b></label><i><em style="width:91%"></em></i><label>Check-in <b>58%</b></label><i><em style="width:58%"></em></i><div class="alert">! <span><b>Patrón detectado</b><small>Demoras durante el check-in</small></span></div></div>
+</section>
+
+<section class="section"><span class="eyebrow">03 · PROPUESTA DE VALOR</span><h2>Una experiencia sencilla para visualizar oportunidades.</h2>
+<div class="cards"><article><span>★</span><h3>Reputación</h3><p>Comprende qué factores influyen en la percepción del huésped.</p></article><article><span>⌁</span><h3>Información</h3><p>Organiza hallazgos para facilitar el análisis.</p></article><article><span>↗</span><h3>Mejora</h3><p>Relaciona problemas con acciones e indicadores.</p></article></div></section>
+
+<section id="trivia" class="game-section">
+  <div class="game-intro">
+    <span class="eyebrow">04 · EXPERIENCIA INTERACTIVA</span>
+    <h2>🎮 Reto Hotel Boutique</h2>
+    <p>
+      Pon a prueba tus conocimientos analizando reseñas, detectando problemas
+      y tomando decisiones para mejorar la experiencia del huésped.
+    </p>
+  </div>
+
+  <div id="juego-real" class="embedded-game">
+    <div class="embedded-head">
+      <div>
+        <span class="eyebrow">JUEGO INTEGRADO</span>
+        <h3>Hotel Boutique Challenge</h3>
+        <p>La trivia se encuentra integrada directamente en esta página.</p>
+      </div>
+      <a class="btn dark" href="#juego-real">Abrir juego ↓</a>
+    </div>
+
+    <iframe
+      src="https://darianaecheverria.github.io/hotel-boutique-challengee/"
+      title="Hotel Boutique Challenge - Trivia interactiva"
+      loading="lazy"
+      allow="fullscreen"
+      class="game-frame">
+    </iframe>
+  </div>
+</section>
+</main>
+<footer><b>Hotel Boutique</b><span>Proyecto de optimización de valoraciones · Experiencia interactiva</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
