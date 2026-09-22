@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hotel Boutique Challenge - trivia interactiva sobre reputación y experiencia del huésped.">
+  <title>Hotel Boutique Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">HB</div>
+      <div><strong>Hotel Boutique</strong><span>Challenge</span></div>
+    </div>
+    <button class="ghost-btn" id="resetTop" type="button">Reiniciar</button>
+  </header>
+
+  <main>
+    <section id="startScreen" class="screen active">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <span class="eyebrow">TRIVIA INTERACTIVA</span>
+          <h1>¿Puedes mejorar la reputación de un hotel boutique?</h1>
+          <p>Analiza reseñas, detecta problemas y toma decisiones para mejorar la experiencia del huésped.</p>
+          <div class="mini-stats">
+            <div><strong>3</strong><span>Rondas</span></div>
+            <div><strong>100</strong><span>Puntos máx.</span></div>
+            <div><strong>4.1</strong><span>Rating inicial</span></div>
+          </div>
+          <button class="primary-btn" id="startBtn" type="button">Comenzar trivia <span>→</span></button>
+        </div>
+        <div class="hero-visual">
+          <div class="hotel-illustration">
+            <div class="sun"></div>
+            <div class="building">
+              <div class="roof"></div>
+              <div class="windows"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="door"></div>
+            </div>
+            <div class="pool"></div><div class="plant p1"></div><div class="plant p2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="how-it-works">
+        <span class="eyebrow">MECÁNICA</span>
+        <p><strong>Trivia + publicidad:</strong> después de cada ronda aparece un banner promocional durante 5 segundos antes de continuar.</p>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <div class="game-head">
+        <div><span class="eyebrow">HOTEL BOUTIQUE CHALLENGE</span><h2 id="roundTitle">Ronda 1</h2></div>
+        <div class="score-box"><span>PUNTOS</span><strong id="score">0</strong></div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-labels"><span id="stepText">Ronda 1 de 3</span><span id="progressPercent">33%</span></div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+
+      <div id="challengeContainer"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button class="primary-btn next-btn hidden" id="nextBtn" type="button">Continuar →</button>
+    </section>
+
+    <section id="adScreen" class="screen">
+      <div class="ad-card">
+        <span class="ad-label">PUBLICIDAD · PROMOCIÓN</span>
+        <div class="ad-content">
+          <div class="ad-logo">HB</div>
+          <div>
+            <span class="eyebrow">SOLUCIÓN PARA HOTELES BOUTIQUE</span>
+            <h2>Convierte las reseñas en decisiones.</h2>
+            <p>Analiza comentarios, detecta problemas recurrentes y presenta oportunidades de mejora desde un solo lugar.</p>
+            <button class="ad-cta" id="adCta" type="button">Conocer la solución →</button>
+          </div>
+        </div>
+        <div class="ad-bottom">
+          <span>Contenido promocional de ejemplo</span>
+          <strong id="countdown">5</strong>
+        </div>
+        <button class="skip-btn hidden" id="skipBtn" type="button">Continuar →</button>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="result-card">
+        <span class="eyebrow">TRIVIA COMPLETADA</span>
+        <h2 id="resultTitle">¡Desafío completado!</h2>
+        <p id="resultMessage"></p>
+        <div class="dashboard">
+          <div class="metric"><span>Rating inicial</span><strong>4.1 ⭐</strong></div>
+          <div class="metric highlight"><span>Rating simulado</span><strong id="finalRating">4.1 ⭐</strong></div>
+          <div class="metric"><span>Reputación</span><strong id="reputation">40%</strong></div>
+          <div class="metric"><span>Puntuación</span><strong id="finalScore">0/100</strong></div>
+        </div>
+        <div class="diagnosis">
+          <div>
+            <span class="tag">PROBLEMA DETECTADO</span>
+            <h3>Demoras en el check-in</h3>
+            <p>Las reseñas del caso muestran un patrón de comentarios relacionados con tiempos de espera durante el registro de llegada.</p>
+          </div>
+          <div class="diagnosis-icon">↗</div>
+        </div>
+        <div class="actions">
+          <button class="primary-btn" id="restartBtn" type="button">Jugar de nuevo</button>
+          <button class="secondary-btn" id="shareBtn" type="button">Copiar resultado</button>
+        </div>
+        <p id="copyMessage" class="copy-message"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Hotel Boutique Challenge</span><span>Trivia de experiencia y reputación</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
